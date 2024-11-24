@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Django App</title>
+  </head>
+  <body>
+    <div >
+      <h1>Programming Language Syntax</h1>
+      <div>
+        <p>
+          This chapter explores the formal structure of programming languages.
+          It introduces context-free grammars (CFGs) and their role in defining
+          syntax, with constructs like terminals, nonterminals, and production
+          rules. <br />
+          For example, an arithmetic expression grammar might include rules such
+          as: <br />
+          <br />
+          <code>
+            Expr → Expr + Term | Term <br />
+            Term → Term * Factor | Factor <br />
+            Factor → ( Expr ) | number
+          </code>
+          <br />
+          <br />
+          The chapter also discusses parse trees, which visually represent
+          derivations, and highlights ambiguity in grammars. Ambiguous
+          expressions, such as 3 + 4 * 5, demonstrate the need for precedence
+          and associativity rules to resolve meaning. Syntax diagrams and
+          Backus-Naur Form (BNF) are also introduced as tools for grammar
+          definition.
+        </p>
+      </div>
+
+      <div>
+        <p>
+          Chapter 2 of <em>Programming Language Pragmatics</em>, titled
+          <strong>Programming Language Syntax</strong>, delves deeper into how
+          syntax rules are formalized and utilized in programming languages. It
+          explains <strong>lexical structure</strong>, which defines tokens such
+          as keywords, identifiers, and operators, and contrasts it with syntax,
+          which governs their arrangement.
+        </p>
+        <p>
+          <strong>Abstract syntax trees (ASTs)</strong> are introduced as a
+          compact representation of a program's structure, eliminating
+          unnecessary syntax details while preserving semantic meaning. For
+          instance, the expression <code>3 + 4 * 5</code> has a corresponding
+          AST that reflects operator precedence:
+        </p>
+        <pre>
+                +
+               / \
+              3   *
+                 / \
+                4   5
+          </pre
+        >
+        <p>
+          The chapter also covers <strong>syntax error detection</strong> during
+          parsing and the importance of designing grammars that minimize
+          ambiguity and improve readability. Techniques like
+          <strong>extended Backus-Naur Form (EBNF)</strong> are discussed for
+          enhancing grammar expressiveness, while tools like
+          <strong>Yacc</strong> and <strong>ANTLR</strong> are highlighted for
+          automating parser generation.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
