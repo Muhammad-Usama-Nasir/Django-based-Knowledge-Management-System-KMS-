@@ -5,135 +5,175 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-
-          #main-class {
+        #main-class {
             /*
             display: flex;
             align-items: flex-start; 
             justify-content: center; 
             */
-            padding-left: 25px;
-            padding-right: 25px;
-            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
             padding-bottom: 10px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          }
+        }
 
-        #heading-main{
-          font-size: 2rem;
+        #heading-main {
+            font-size: 2rem;
 
         }
-        
 
-          .section-content {
-              display: none;
-              margin: 10px 0;
-              padding: 10px;
-              border: 1px solid #416e79;
-              background-color: #F0F8FF;
-          }
-          
-          /* Highlight section title on hover */
-          .section-title {
-              cursor: pointer;
-              color: #416e79;
-              font-size: 1.2rem;
-          }
-          
-          .section-title:hover {
-              text-decoration: underline;
-          }
+        .main-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            max-width: 100%;
+        }
+
+        .header-div {
+            display: flex;
+            align-items: flex-start;
+            width: 50rem;
+            text-align: justify;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .image-section {
+            padding-top: 120px;
+            padding-left: 35px;
+            padding-bottom: 30px;
+            flex: 0 0 auto;
+            max-width: 30rem;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .section-content {
+            display: none;
+            margin: 10px 0;
+            padding: 20px;
+            border: 1px solid #666699;
+            background-color: #F0F8FF;
+            text-align: justify;
+            margin: 10px;
+        }
+
+        /* Highlight section title on hover */
+        .section-title {
+            cursor: pointer;
+            color: #666699;
+            font-size: 1.2rem;
+            text-align: justify;
+            margin: 10px;
+        }
+
+        .section-title:hover {
+            text-decoration: underline;
+        }
         </style>
         <script>
-            function showSection(sectionId) {
-                // Hide all section content
-                const sections = document.querySelectorAll('.section-content');
-                sections.forEach((section) => {
-                    section.style.display = 'none';
-                });
-            
-                // Show the clicked section
-                const selectedSection = document.getElementById(sectionId);
-                if (selectedSection) {
-                    selectedSection.style.display = 'block';
-                }
+        function showSection(sectionId) {
+            // Hide all section content
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach((section) => {
+                section.style.display = 'none';
+            });
+
+            // Show the clicked section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
             }
+        }
         </script>
-        <title>Django App</title>
+        <title>Knowledge Management System</title>
     </head>
     <body>
         <div id="main-class">
             <div>
-                <section id="chapter2-description">
-                    <h1 id="heading-main">Programming Language Syntax</h1>
-                    <p>
-                        This chapter provides an
-          in-depth exploration of the syntactic structures that define programming languages. It
-          emphasizes the distinction between
-                        <strong>concrete syntax</strong>
-                        , which reflects the actual
-          structure of source code, and
-                        <strong>abstract syntax</strong>
-                        , which serves as an internal
-          representation for tools like compilers.
-                    </p>
-                    <p>
-                        The chapter introduces foundational concepts from formal language theory, including
-                        <strong>alphabets</strong>
-                        ,
-                        <strong>strings</strong>
-                        , and
-                        <strong>languages</strong>
-                        , and explains how these
-          concepts underpin the
-          rules of syntax. It delves into the use of
-                        <strong>context-free grammars (CFGs)</strong>
-                        to formally define
-          programming languages, with a focus on
-                        <strong>Backus-Naur Form (BNF)</strong>
-                        as a widely-used notation.
-          Readers learn about the importance of
-                        <strong>syntax trees</strong>
-                        (both parse trees and abstract syntax
-          trees)
-          in representing program structure.
-                    </p>
-                    <p>
-                        Key practical topics include:
-                        <ul>
-                            <li>
-                                The use of
-                                <strong>regular expressions</strong>
-                                for defining tokens in lexical analysis.
-                            </li>
-                            <li>
-                                The problem of
-                                <strong>ambiguous grammars</strong>
-                                and techniques to resolve them using precedence
-            and associativity rules.
-                            </li>
-                            <li>
-                                An introduction to
-                                <strong>parsing</strong>
-                                , detailing both top-down and bottom-up methods for syntactic
-            analysis.
-                            </li>
-                        </ul>
-                    </p>
-                </section>
+                <div class="main-container">
+                    <div class="header-div">
+                        <section id="chapter2-description">
+                            <h1 id="heading-main">Programming Language Syntax</h1>
+                            <p>
+                                This chapter provides an
+                            in-depth exploration of the syntactic structures that define programming languages. It
+                            emphasizes the distinction between
+                                <strong>concrete syntax</strong>
+                                , which reflects the actual
+                            structure of source code, and
+                                <strong>abstract syntax</strong>
+                                , which serves as an internal
+                            representation for tools like compilers.
+                            </p>
+                            <p>
+                                The chapter introduces foundational concepts from formal language theory, including
+                                <strong>alphabets</strong>
+                                ,
+                                <strong>strings</strong>
+                                , and
+                                <strong>languages</strong>
+                                , and explains how these
+                            concepts underpin the
+                            rules of syntax. It delves into the use of
+                                <strong>context-free grammars (CFGs)</strong>
+                                to formally define
+                            programming languages, with a focus on
+                                <strong>Backus-Naur Form (BNF)</strong>
+                                as a widely-used notation.
+                            Readers learn about the importance of
+                                <strong>syntax trees</strong>
+                                (both parse trees and abstract syntax
+                            trees)
+                            in representing program structure.
+                            </p>
+                            <p>
+                                Key practical topics include:
+                                <ul>
+                                    <li>
+                                        The use of
+                                        <strong>regular expressions</strong>
+                                        for defining tokens in lexical analysis.
+                                    </li>
+                                    <li>
+                                        The problem of
+                                        <strong>ambiguous grammars</strong>
+                                        and techniques to resolve them using precedence
+                                and associativity rules.
+                                    </li>
+                                    <li>
+                                        An introduction to
+                                        <strong>parsing</strong>
+                                        , detailing both top-down and bottom-up methods for syntactic
+                                analysis.
+                                    </li>
+                                </ul>
+                            </p>
+                        </section>
+                    </div>
+                    <div class="image-section">
+                        <img src="https://www.logicraysacademy.com/blog/wp-content/uploads/2021/02/Java-programming-language-768x433.jpg" alt="Programming Syntax Logo">
+                    </div>
+                </div>
                 <div id="sections-container">
                     <!-- Section 1 -->
                     <div class="section">
                         <h3 class="section-title" onclick="showSection('section1')">1. Formal Language Theory</h3>
                         <div class="section-content" id="section1">
                             <p>
-                                Formal language theory provides the foundation for understanding how programming languages are defined.
-              It is a branch of computer science that studies the syntax and structure of languages using mathematical
-              models.
+                                Formal language theory provides the foundation for understanding how programming languages
+                            are defined.
+                            It is a branch of computer science that studies the syntax and structure of languages using
+                            mathematical
+                            models.
                             </p>
                             <p>
-                                A programming language is considered a formal language because it consists of a finite set of rules that 
-              define how valid strings (programs) are constructed. The three fundamental components are:
+                                A programming language is considered a formal language because it consists of a finite set
+                            of rules that
+                            define how valid strings (programs) are constructed. The three fundamental components are:
                             </p>
                             <ul>
                                 <li>
@@ -196,8 +236,9 @@
                                 </li>
                             </ul>
                             <p>
-                                Formal language theory also classifies languages into different types based on their complexity and expressive
-              power. These classifications are known as the
+                                Formal language theory also classifies languages into different types based on their
+                            complexity and expressive
+                            power. These classifications are known as the
                                 <strong>Chomsky Hierarchy</strong>
                                 , which includes:
                             </p>
@@ -247,7 +288,7 @@
                                 ,
                                 <code>()</code>
                                 ) and then
-              parsed to verify its validity according to the grammar of the C programming language.
+                        parsed to verify its validity according to the grammar of the C programming language.
                             </p>
                         </div>
                     </div>
@@ -256,9 +297,10 @@
                         <h3 class="section-title" onclick="showSection('section2')">2. Context-Free Grammars</h3>
                         <div class="section-content" id="section2">
                             <p>
-                                Context-free grammars (CFGs) are a formal way of defining the syntax of programming languages. 
-                          They are used to describe the structure of valid strings in a language using a set of rules. 
-                          CFGs consist of:
+                                Context-free grammars (CFGs) are a formal way of defining the syntax of programming
+                            languages.
+                            They are used to describe the structure of valid strings in a language using a set of rules.
+                            CFGs consist of:
                             </p>
                             <ul>
                                 <li>
@@ -273,15 +315,15 @@
                                     <code>ab</code>
                                     ,
                                     <code>aabb</code>
-                                    , and so on. Each 
-                              rule specifies how a
+                                    , and so on. Each
+                                rule specifies how a
                                     <em>non-terminal</em>
                                     can be expanded into a combination of terminals and/or other non-terminals.
                                 </li>
                                 <li>
                                     <strong>Terminals:</strong>
-                                    The actual symbols that appear in the strings of the language. 
-                              For example, in the grammar
+                                    The actual symbols that appear in the strings of the language.
+                                For example, in the grammar
                                     <code>S → aSb | ε</code>
                                     ,
                                     <code>a</code>
@@ -291,15 +333,16 @@
                                 </li>
                                 <li>
                                     <strong>Non-terminals:</strong>
-                                    Symbols used as placeholders that are replaced by other symbols 
-                              according to the production rules. For example,
+                                    Symbols used as placeholders that are replaced by other symbols
+                                according to the production rules. For example,
                                     <code>S</code>
                                     in the above grammar is a non-terminal.
                                 </li>
                             </ul>
                             <h4>Key Properties of CFGs</h4>
                             <p>
-                                CFGs are characterized by their ability to generate structured languages. Some important properties include:
+                                CFGs are characterized by their ability to generate structured languages. Some important
+                            properties include:
                             </p>
                             <ul>
                                 <li>
@@ -318,13 +361,14 @@
                                 </li>
                                 <li>
                                     <strong>Non-deterministic Nature:</strong>
-                                    A given grammar can sometimes allow multiple derivations for the same string, requiring 
-                              ambiguity resolution (e.g., using operator precedence and associativity).
+                                    A given grammar can sometimes allow multiple derivations for the same string, requiring
+                                ambiguity resolution (e.g., using operator precedence and associativity).
                                 </li>
                             </ul>
                             <h4>Applications of CFGs</h4>
                             <p>
-                                CFGs are widely used in computer science, particularly in the design and implementation of programming languages:
+                                CFGs are widely used in computer science, particularly in the design and implementation of
+                            programming languages:
                             </p>
                             <ul>
                                 <li>
@@ -333,12 +377,13 @@
                                 </li>
                                 <li>
                                     <strong>Compiler Design:</strong>
-                                    CFGs help define the syntactic structure that a compiler enforces while converting 
-                              high-level code into machine code.
+                                    CFGs help define the syntactic structure that a compiler enforces while converting
+                                high-level code into machine code.
                                 </li>
                                 <li>
                                     <strong>Documentation:</strong>
-                                    CFGs, expressed in formats like Backus-Naur Form (BNF), are often used in language documentation.
+                                    CFGs, expressed in formats like Backus-Naur Form (BNF), are often used in language
+                                documentation.
                                 </li>
                             </ul>
                             <h4>Example Grammar: Arithmetic Expressions</h4>
@@ -373,11 +418,15 @@
                             </ul>
                             <h4>Limitations of CFGs</h4>
                             <p>
-                                While CFGs are powerful, they cannot capture all aspects of a programming language's syntax. For instance:
+                                While CFGs are powerful, they cannot capture all aspects of a programming language's syntax.
+                            For instance:
                             </p>
                             <ul>
                                 <li>CFGs cannot enforce contextual rules (e.g., variable declarations before use).</li>
-                                <li>They may become ambiguous for complex languages, requiring additional rules or transformations.</li>
+                                <li>
+                                    They may become ambiguous for complex languages, requiring additional rules or
+                                transformations.
+                                </li>
                             </ul>
                             <h4>Ambiguity in CFGs</h4>
                             <p>
@@ -391,8 +440,8 @@
                             <p>
                                 Allows multiple interpretations of
                                 <code>3 + 5 * 2</code>
-                                . To resolve ambiguity, operator precedence and associativity 
-                          rules are applied. For example:
+                                . To resolve ambiguity, operator precedence and associativity
+                            rules are applied. For example:
                             </p>
                             <pre>
                                 <code>
@@ -411,12 +460,16 @@
                         <h3 class="section-title" onclick="showSection('section3')">3. Syntax Trees</h3>
                         <div class="section-content" id="section3">
                             <p>
-                                Syntax trees represent the hierarchical structure of a program's syntax, serving as an intermediary between the grammar of a language and its semantic meaning. This section elaborates on:
+                                Syntax trees represent the hierarchical structure of a program's syntax, serving as an
+                            intermediary between the grammar of a language and its semantic meaning. This section
+                            elaborates on:
                             </p>
                             <ul>
                                 <li>
                                     <strong>Parse Trees:</strong>
-                                    Parse trees (also called derivation trees) illustrate how a specific string conforms to the rules of a grammar. They are often used in parsing to validate input or as a precursor to further processing.
+                                    Parse trees (also called derivation trees) illustrate how a specific string conforms to
+                                the rules of a grammar. They are often used in parsing to validate input or as a
+                                precursor to further processing.
                                     <p>
                                         <strong>Example:</strong>
                                         For the grammar:
@@ -444,7 +497,9 @@
                                 </li>
                                 <li>
                                     <strong>Abstract Syntax Trees (ASTs):</strong>
-                                    ASTs abstract away syntactic details like parentheses or operators' exact placement, focusing on the semantic structure of the code. These are critical for compilers and interpreters.
+                                    ASTs abstract away syntactic details like parentheses or operators' exact placement,
+                                focusing on the semantic structure of the code. These are critical for compilers and
+                                interpreters.
                                     <p>
                                         <strong>Example:</strong>
                                         For the input
@@ -461,7 +516,8 @@
                                           a   b
                                     </pre>
                                     <p>
-                                        Unlike parse trees, ASTs simplify operations by omitting redundant grammar rules and focusing on the logical relationships between components.
+                                        Unlike parse trees, ASTs simplify operations by omitting redundant grammar rules and
+                                    focusing on the logical relationships between components.
                                     </p>
                                 </li>
                                 <li>
@@ -469,11 +525,13 @@
                                     <ul>
                                         <li>
                                             <strong>Parse Trees:</strong>
-                                            Represent every detail of the grammar. Example: parentheses and operator precedence.
+                                            Represent every detail of the grammar. Example: parentheses and operator
+                                        precedence.
                                         </li>
                                         <li>
                                             <strong>ASTs:</strong>
-                                            Simplified and optimized for processing; they omit extraneous nodes that do not affect meaning.
+                                            Simplified and optimized for processing; they omit extraneous nodes that do not
+                                        affect meaning.
                                         </li>
                                     </ul>
                                 </li>
@@ -503,8 +561,10 @@
                         <h3 class="section-title" onclick="showSection('section4')">4. Regular Expressions</h3>
                         <div class="section-content" id="section4">
                             <p>
-                                Regular expressions are powerful tools used in programming languages to define patterns for matching
-                          strings. They play a crucial role in lexical analysis, which is the process of converting source code into tokens.
+                                Regular expressions are powerful tools used in programming languages to define patterns for
+                            matching
+                            strings. They play a crucial role in lexical analysis, which is the process of converting
+                            source code into tokens.
                             </p>
                             <ul>
                                 <li>
@@ -512,8 +572,9 @@
                                     The regular expression
                                     <code>[a-zA-Z_][a-zA-Z0-9_]*</code>
                                     matches valid variable names in most programming
-                              languages. This ensures that variable names start with a letter or underscore and can be followed by any combination
-                              of letters, digits, or underscores.
+                                languages. This ensures that variable names start with a letter or underscore and can be
+                                followed by any combination
+                                of letters, digits, or underscores.
                                 </li>
                                 <li>
                                     <strong>Applications:</strong>
@@ -526,7 +587,8 @@
                                 </li>
                                 <li>
                                     <strong>Lexical Analyzer Example:</strong>
-                                    In a programming language like Python, regular expressions are used to break code into tokens. For instance:
+                                    In a programming language like Python, regular expressions are used to break code into
+                                tokens. For instance:
                                     <pre>
                                         <code>
                                             # Example code snippet
@@ -536,7 +598,8 @@
                                           print(tokens)  # Output: ['int', 'x', '=', '10', ';']
                                         </code>
                                     </pre>
-                                    This regular expression matches identifiers, numbers, and symbols, effectively tokenizing the input string.
+                                    This regular expression matches identifiers, numbers, and symbols, effectively
+                                tokenizing the input string.
                                 </li>
                                 <li>
                                     <strong>Complex Patterns:</strong>
@@ -558,8 +621,9 @@
                                 </li>
                             </ul>
                             <p>
-                                Mastering regular expressions is an essential skill for developers working with parsers, interpreters, and tools
-                          for automated text processing.
+                                Mastering regular expressions is an essential skill for developers working with parsers,
+                            interpreters, and tools
+                            for automated text processing.
                             </p>
                         </div>
                     </div>
@@ -568,9 +632,11 @@
                         <h3 class="section-title" onclick="showSection('section5')">5. Parsing Techniques</h3>
                         <div class="section-content" id="section5">
                             <p>
-                                Parsing converts source code into a structured format based on grammar. This step is crucial in
-                          language processing as it ensures the code adheres to the syntactic rules defined by the grammar.
-                          The two main approaches are:
+                                Parsing converts source code into a structured format based on grammar. This step is crucial
+                            in
+                            language processing as it ensures the code adheres to the syntactic rules defined by the
+                            grammar.
+                            The two main approaches are:
                             </p>
                             <ul>
                                 <li>
@@ -580,7 +646,7 @@
                                         <li>
                                             <strong>Recursive Descent Parsing:</strong>
                                             A straightforward top-down approach
-                                      where each non-terminal is implemented as a recursive function.
+                                        where each non-terminal is implemented as a recursive function.
                                             <p>Example: Parsing an arithmetic expression grammar:</p>
                                             <pre>
                                                 Expr → Term + Expr | Term
@@ -591,7 +657,7 @@
                                                 For the input
                                                 <code>id + id * id</code>
                                                 , recursive descent parsing builds the
-                                          tree from the root
+                                            tree from the root
                                                 <code>Expr</code>
                                                 down to the leaves.
                                             </p>
@@ -599,7 +665,7 @@
                                         <li>
                                             <strong>LL Parsers:</strong>
                                             Top-down parsers that process input from Left-to-right
-                                      and produce a Leftmost derivation.
+                                        and produce a Leftmost derivation.
                                             <p>Example: LL(1) parsers, where 1 indicates a single token lookahead.</p>
                                         </li>
                                     </ul>
@@ -611,7 +677,7 @@
                                         <li>
                                             <strong>Shift-Reduce Parsing:</strong>
                                             A common bottom-up parsing method that
-                                      alternates between
+                                        alternates between
                                             <em>shifting</em>
                                             input tokens onto a stack and
                                             <em>reducing</em>
@@ -622,24 +688,31 @@
                                                 and the rule
                                                 <code>Expr → id + id</code>
                                                 ,
-                                          the parser shifts tokens onto the stack until it matches the rule and reduces it.
+                                            the parser shifts tokens onto the stack until it matches the rule and
+                                            reduces it.
                                             </p>
                                         </li>
                                         <li>
                                             <strong>LR Parsers:</strong>
                                             Bottom-up parsers that use lookahead to decide reductions.
-                                            <p>Example: LR(1) parsers use 1-token lookahead, while LALR parsers optimize the process for efficiency.</p>
+                                            <p>
+                                                Example: LR(1) parsers use 1-token lookahead, while LALR parsers optimize
+                                            the
+                                            process for efficiency.
+                                            </p>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                             <p>
                                 Parsing errors can occur when the input does not conform to the grammar. Top-down parsers
-                          often provide clearer error messages, while bottom-up parsers are more powerful in handling complex grammars.
+                            often provide clearer error messages, while bottom-up parsers are more powerful in handling
+                            complex grammars.
                             </p>
                             <p>
-                                Modern compiler tools like Yacc and ANTLR use parsing techniques to generate efficient parsers
-                          for programming languages.
+                                Modern compiler tools like Yacc and ANTLR use parsing techniques to generate efficient
+                            parsers
+                            for programming languages.
                             </p>
                         </div>
                     </div>
